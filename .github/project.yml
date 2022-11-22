@@ -9,9 +9,9 @@ jobs:
     steps:
       - name: Get project data
         env:
-          GITHUB_TOKEN: ${{ secrets.YOUR_TOKEN }}
-          ORGANIZATION: YOUR_ORGANIZATION
-          PROJECT_NUMBER: YOUR_PROJECT_NUMBER
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          ORGANIZATION: bgrins
+          PROJECT_NUMBER: 2
         run: |
           gh api graphql -f query='
             query($org: String!, $number: Int!) {
